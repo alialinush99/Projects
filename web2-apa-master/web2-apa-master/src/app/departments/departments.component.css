@@ -1,0 +1,10 @@
+.department {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.department p, .department button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+}

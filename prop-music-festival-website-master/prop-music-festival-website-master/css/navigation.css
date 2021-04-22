@@ -1,0 +1,39 @@
+header {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-bottom: 1px solid #E6E6E6;
+  align-items: flex-start;
+  width: 100%;
+  padding: 15px 10px 15px;
+  box-shadow: 0px 1px 2px #b8b8b8;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  float: right;
+  align-items: center;
+  margin-right: 25px
+}
+
+nav a, nav a:visited {
+  text-decoration: none;
+  color: #999999;
+  padding: 10px 20px;
+  margin-left: 5px;
+  border-radius: 15px;
+  transition: 0.2s;
+  float: right;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background: #2196f3;
+  color: white;
+}
+
+#login {
+  font-weight: bold;
+}

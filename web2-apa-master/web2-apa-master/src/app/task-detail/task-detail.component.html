@@ -1,0 +1,63 @@
+<div *ngIf="task"
+     class="container text-center col-4">
+    <h2 class = "m-4" >{{task.name | uppercase}} Details</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-text"><span>ID: </span>
+        </div>
+                <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                disabled
+                [(ngModel)]="task.id" placeholder="Task ID"/>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-text"><span>Name: </span>
+        </div>
+        <input
+                type="text"
+                class="form-control"
+                placeholder="Task Name"
+                [(ngModel)]="task.name"/>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-text"><span>Description: </span>
+        </div>
+        <input
+                type="text"
+                class="form-control"
+                placeholder="Task Description-unavailable(empty)"
+                disabled
+                [(ngModel)]="task.description"/>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-text"><span>Employees: </span>
+        </div>
+        <select class="custom-select" id="inputGroupSelect04" [(ngModel)]="taskService.department_id" placeholder="Select employee...">-->
+            <option selected disabled>Select employee...</option>
+            <option *ngFor="let e of employeeService.employees" [ngValue]="e.id">{{e.first_name}} {{e.last_name}}
+            </option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-text"><span>Due Date: </span>
+        </div>
+        <input
+                type="text"
+                class="form-control"
+                placeholder="Due Date"
+                [(ngModel)]="task.due_date"/>
+    </div>
+    <button (click)="updateTask() "
+            routerLink="/tasks" class="btn btn-success float-left mb-3" type="button" >
+        Save
+    </button>
+    <button routerLink="/tasks" class="btn btn-primary float-center mb-3" type="button">
+        Cancel
+    </button>
+    <button (click)="deleteTask()"
+            routerLink="/tasks" class="btn btn-danger float-right mb-3" type="button">
+        Delete
+    </button>
+    <div class="clearfix"></div>
+</div>

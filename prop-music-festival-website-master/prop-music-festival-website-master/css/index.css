@@ -1,0 +1,119 @@
+html {
+	overflow-y: scroll;
+}
+
+.home-landing-img-container {
+  margin: 0;
+  padding: 0;
+  background: url('../resources/home-landing.png');
+  background-size: cover;
+  width: 100%;
+  height: 60%;
+}
+
+#heading {
+  position: relative;
+  top: 70%;
+  color: white;
+  font-size: 24pt;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 0 black;
+  font-weight: bold;
+}
+
+.btn-border-backgroundless {
+  position: relative;
+  width: 10%;
+  top: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin: auto;
+  font-size: 12pt;
+  background-color: transparent;
+  padding: 10px 5px;
+  border: 1px solid white;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.btn-border-backgroundless:hover {
+  color: white;
+  border: none;
+  background-color: #ee7600;
+}
+
+.event-card-image {
+  width: 40%;
+  height: 30%;
+  opacity: 0.85;
+}
+
+.event-card-text {
+  color: #fff;
+  font-size: 16pt;
+  font-family: Helvetica, sans-serif;
+  margin: 60px 0 0 0;
+  text-shadow: 0 1px 0 black;
+  font-weight: bold;
+}
+
+.landing-element {
+  position: relative;
+  top: 80%;
+  bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.element {
+  position: relative;
+  top: 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.darken {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.event-card-container {
+	width: 100%;
+	height: 50%;
+	margin-top: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+.event-card {
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+	margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 3px 0px grey;
+}
+
+#event-card-one {
+	background: url('../resources/event-one.jpg');
+}
+
+#event-card-two {
+	background: url('../resources/event-two.jpg');
+}
+
+#event-card-three {
+	background: url('../resources/event-three.jpg');
+}

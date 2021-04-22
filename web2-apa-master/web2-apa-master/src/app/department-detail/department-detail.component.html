@@ -1,0 +1,61 @@
+<div *ngIf="department"
+     class="container text-center col-4 p-0">
+  <h2 class="m-4">
+    {{oldDepartmentName | uppercase}} Details
+  </h2>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend w-25">
+      <span class="input-group-text w-100">ID:</span>
+    </div>
+    <input type="text"
+           class="form-control"
+           placeholder="Name"
+           [(ngModel)]="department.id"
+           disabled>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend w-25">
+      <span class="input-group-text w-100">Name:</span>
+    </div>
+    <input type="text"
+           class="form-control"
+           placeholder="Name"
+           [(ngModel)]="department.name">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend w-25">
+      <span class="input-group-text w-100">Building:</span>
+    </div>
+    <input type="text"
+           class="form-control"
+           placeholder="Name"
+           [(ngModel)]="department.building">
+  </div>
+
+  <button (click)="updateDepartment()"
+          class="btn btn-success float-left mb-3" type="button">
+    Save
+  </button>
+
+  <button (click)="cancel()" class="btn btn-primary float-center mb-3" type="button">
+    Cancel
+  </button>
+
+  <button (click)="removeDepartment(department.id)"
+          class="btn btn-danger float-right mb-3" type="button">
+    Delete
+  </button>
+
+  <div class="clearfix"></div>
+
+  <p class="mb-3">Employees inside this department:</p>
+
+  <div class="my-2 mx-1 employee btn-primary p-3 center"
+       *ngFor="let eId of department.employees"
+       routerLink="/employee/{{eId}}">
+    <p class="text-white m-0">
+      {{this.employeeService.getEmployeeById(eId).first_name}} {{this.employeeService.getEmployeeById(eId).last_name}}
+    </p>
+  </div>
+
+</div>

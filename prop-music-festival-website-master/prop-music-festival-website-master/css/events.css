@@ -1,0 +1,99 @@
+/* events */
+html {
+	overflow-y: scroll;
+}
+
+.events-content {
+	width: 90%;
+	margin: auto auto;
+	padding: 25px;
+}
+
+.section-title {
+	display: block;
+	color: grey;
+}
+
+#upcoming-events-container {
+	margin-top: 40px;
+}
+
+#past-events-container {
+	margin-top: 50px;
+}
+
+.text-placeholder {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	color: grey;
+}
+
+.event-container {
+	display: inline-block;
+	width: 32%;
+	height: 250px;
+	margin-top: 10px;
+	margin-left: 1%;
+	border-radius: 6px;
+	text-align: center;
+	box-shadow: 2px 5px 10px 0px grey;
+	background: url('../resources/event-one.jpg');
+}
+
+.darken {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.event-name {
+	position: relative;
+	top: 18%;
+	font-size: 28pt;
+	margin: auto;
+	text-decoration: none;
+	color: white;
+}
+
+.event-dates {
+	position: relative;
+	top: 20%;
+	font-size: 14pt;
+	margin: auto;
+	text-decoration: none;
+	color: white;
+}
+
+.event-location {
+	position: relative;
+	top: 29%;
+	font-size: 14pt;
+	margin: auto;
+	text-decoration: none;
+	color: white;
+}
+
+.btn-learn-more {
+	position: relative;
+	width: 20%;
+	top: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	margin: auto;
+	padding: 10px 20px;
+	border: 1px solid white;
+	border-radius: 30px;
+	transition: 0.2s;
+}
+
+.btn-learn-more:hover {
+	color: white;
+	border: none;
+	background-color: #ee7600;
+}

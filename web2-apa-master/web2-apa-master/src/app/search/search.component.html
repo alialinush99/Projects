@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <h3 class = "mb-4 mt-4 text-center" >Search for "{{query}}"</h3>
+  <div class="row justify-content-center text-center">
+    <div *ngIf="this.departmentsService.getDepartmentsByName(query)"
+          class="col-3">
+      <h5>Departments:</h5>
+      <div
+        *ngFor="let d of this.departmentsService.getDepartmentsByName(query)"
+        routerLink="/department/{{d.id}}"
+        class="my-2 mx-1 department btn-primary p-3 center">
+        {{d.name}}
+      </div>
+    </div>
+    <div *ngIf="this.taskService.getTasksByName(query)"
+         class="col-3">
+      <h5>Tasks:</h5>
+      <div
+        *ngFor="let t of this.taskService.getTasksByName(query)"
+        routerLink="/task/{{t.id}}"
+        class="my-2 mx-1 task btn-primary p-3 center">
+        {{t.name}}
+      </div>
+    </div>
+    <div *ngIf="this.employeeService.getEmployeesByName(query)"
+         class="col-3">
+      <h5>Employees:</h5>
+      <div
+        *ngFor="let e of this.employeeService.getEmployeesByName(query)"
+        routerLink="/employee/{{e.id}}"
+        class="my-2 mx-1 employee btn-primary p-3 center">
+        {{e.first_name}} {{e.last_name}}
+      </div>
+    </div>
+  </div>
+</div>

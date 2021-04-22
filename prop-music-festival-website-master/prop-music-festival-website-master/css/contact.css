@@ -1,0 +1,128 @@
+.contact-content {
+  margin: 0;
+  padding: 0;
+  background: url('../resources/contact.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+}
+
+h1 {
+  color: white;
+  font-size: 24pt;
+  font-family: Helvetica, sans-serif;
+  margin: 5px 0 0 0;
+  font-weight: bold;
+}
+
+h2 {
+  color: #fff;
+  font-size: 16pt;
+  font-family: Helvetica, sans-serif;
+  margin: 2px 0 0 0;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+  color: #999;
+  font-weight: 800;
+  font-size: 20pt;
+}
+
+.landing-element {
+  position: relative;
+  top: 70%;
+  bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.darken {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-information-container {
+	font-size: 18pt;
+	margin: 30px;
+}
+
+/* contact form */
+#cf {
+  display: inline-block;
+   width: 35%;
+   margin-left: 15%;
+   margin-top: 40px;
+   float: left;
+}
+
+/* Clearfix */
+#cf:before,
+#cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#cf:after {
+    clear: both;
+}
+
+.cf-field {
+  width: 90%;
+  padding: 12px 20px !important;
+  margin: 16px auto !important;
+  display: block;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.5s;
+}
+
+.cf-field:hover,:focus {
+  border: 1px solid #ee7600;
+}
+
+#input-submit {
+  display: block;
+  align-self: center;
+  width: 90%;
+  margin: 32px auto;
+  background: #ee7600;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px 10px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.5s;
+}
+
+#input-submit:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Google maps */
+.mapouter {
+  position: relative;
+  text-align: right;
+  display: inline-block;
+  margin-left: 10%;
+  margin-top: 80px;
+  height: 300px;
+  width: 400px;
+  align-self:
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  float: right;
+  background:none !important;
+  height: 300px;
+  width: 400px;
+}

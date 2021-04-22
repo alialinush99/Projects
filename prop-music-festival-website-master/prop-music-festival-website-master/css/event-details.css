@@ -1,0 +1,185 @@
+body {
+  background-image: url('../resources/crowd-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.event-details-content {
+  width: 70%;
+  margin: 15px auto 15px auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 40;
+  border: 1px solid #dbdbdb;
+}
+
+#event-picture {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.event-details-content .row {
+  display: flex; /* equal height of the children */
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.event-details-content .col {
+  flex: 1; /* additionally, equal width */
+}
+
+.event-details-content .title {
+  display: block;
+  color: rgb(109, 109, 109);
+  font-weight: 500;
+  font-size: 20pt;
+}
+
+#title-location {
+  display: block;
+  color: rgb(109, 109, 109);
+  font-weight: 500;
+  font-size: 20pt;
+  padding-left: 25px;
+}
+
+#general-info-section-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+ #btn-buy-tickets {
+  display: block;
+  align-self: center;
+  width: 30%;
+  margin: 10px auto;
+  background: #ee7600;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  padding: 12px 10px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.5s;
+}
+
+#btn-submit-review {
+  display: block;
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #ee7600;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 10px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.5s;
+}
+
+.event-details-content button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.event-performer {
+  margin-left: 35px;
+}
+
+.details {
+  margin-bottom: 10px;
+}
+
+#ticket-availability-field {
+  font-weight: bold;
+}
+
+#event-location {
+  margin-left: 42px;
+  margin-bottom: 30px;
+}
+
+/* reviews */
+.star {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    transition: .6s all;
+  }
+
+#rating {
+  cursor: pointer;
+  display: inline-block
+}
+
+#review-container {
+  width: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 75ch;
+  max-height: 400px;
+}
+
+#review-form .input-group-addon {
+  min-width: 100px;
+}
+
+#review-form .btn {
+  min-width: 100px;
+}
+
+#review-form textarea {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+#review-form .form-group {
+  margin-bottom: 15px;
+}
+
+#review-form .help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  border-left: 5px solid rgb(238, 238, 238);
+  padding-left: 20px;
+}
+
+blockquote .footer{
+  display: block;
+  font-size: 80%;
+}
+
+.stars-container {
+  margin-bottom: 5px;
+}
+
+/* google maps */
+.mapouter {
+  display: block;
+  margin-top: 10px;
+  height: 300px;
+  width: 100%;
+
+}
+
+#gmap_canvas {
+  float: right;
+  background:none !important;
+  height: 300px;
+  width: 100%;
+}

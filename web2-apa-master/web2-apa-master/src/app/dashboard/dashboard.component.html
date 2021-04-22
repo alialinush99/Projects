@@ -1,0 +1,37 @@
+<h2 class="text-center m-5">Dashboard</h2>
+<div class="container-fluid">
+
+  <app-calendar></app-calendar>
+<!--  <div class="row justify-content-center">-->
+<!--    <div class="col-3 mx-3">-->
+<!--      <h3 class="text-center">Employees</h3>-->
+<!--      <div class="row">-->
+<!--        <div class="col-12 my-2 mx-1 employee btn-primary p-3 center"-->
+<!--             *ngFor="let e of employeeService.employees"-->
+<!--             (click)="onSelectEmployee(e)">-->
+<!--          <p href="#"-->
+<!--             class="text-white text-center m-0">-->
+<!--            {{ e.first_name }}-->
+<!--          </p>-->
+<!--          <div *ngIf="e == selectedEmployee"-->
+<!--               class="text-center mt-2">-->
+<!--            <p class="m-0">ID: {{e.id}}</p>-->
+<!--            <p class="m-0">Department: {{ departmentsService.getDepartmentById(e.departmentId).name }}</p>-->
+<!--            <div class="input-group">-->
+<!--              <select [(ngModel)]="selectedNewDepartment"-->
+<!--                      class="custom-select">-->
+<!--                <option *ngFor="let d of departmentsService.departments" [ngValue]="d">{{d.name}}</option>-->
+<!--              </select>-->
+<!--              <div class="input-group-append">-->
+<!--                <button (click)="changeDepartment(e)"-->
+<!--                        class="btn btn-light" type="button">-->
+<!--                  Change-->
+<!--                </button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>

@@ -1,0 +1,44 @@
+<h2 class="text-center m-4">Tasks</h2>
+<div class="container">
+    <!-- READ -->
+    <div class="row justify-content-center">
+        <div class="col-4 my-2 mx-1 task btn-primary p-3 center"
+             *ngFor="let t of taskService.tasks"
+             routerLink="/task/{{t.id}}"
+             [class.selected]="t === taskService.selectedTask">
+            <p class="text-white m-0">
+                {{ t.name }}
+            </p>
+        </div>
+    </div>
+    <!-- CREATE -->
+    <div class="row justify-content-center mt-4">
+        <h3>Add a new Task</h3>
+    </div>
+    <div class="row justify-content-center">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">New Task:</span>
+            </div>
+            <select class="custom-select" id="inputGroupSelect04" [(ngModel)]="taskService.department_id" placeholder="Select department...">-->
+                <option selected disabled>Select department...</option>
+                    <option *ngFor="let d of departmentsService.departments" [ngValue]="d.id">{{d.name}}
+                </option>
+            </select>
+            <input type="text"
+                   class="form-control"
+                   placeholder="Name of Task"
+                   [(ngModel)]="taskService.name">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Due Date"
+                   [(ngModel)]="taskService.due_date">
+            <div class="input-group-append">
+                <button class="btn btn-primary"
+                        type="button"
+                        (click)="addTask()"
+                        [disabled]="!taskService.name && !taskService.department_id && !taskService.description && !taskService.due_date">Add</button>
+            </div>
+        </div>
+    </div>
+</div>

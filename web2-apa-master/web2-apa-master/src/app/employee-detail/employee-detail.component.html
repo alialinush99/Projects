@@ -1,0 +1,90 @@
+<!--<div *ngIf="employee">-->
+
+<!--  <h2>{{employee.first_name | uppercase}} Details</h2>-->
+<!--  <div><span>id: </span>{{employee.id}}</div>-->
+<!--  <div>-->
+<!--    <label>name:-->
+<!--      <input [(ngModel)]="employee.first_name" placeholder="employee first_name"/>-->
+<!--    </label>-->
+<!--    <label>Department ID:-->
+<!--        <input [(ngModel)]="employee.department_id" placeholder="Department ID"/>-->
+<!--    </label>-->
+
+<!--   <label> Department Name:-->
+
+<!--     <input [(ngModel)]="departmentsService.getDepartmentById(employee.department_id).name" placeholder="Department Name"/>-->
+<!--  </label>-->
+
+<!--  <button (click)="deleteEmployee(employee.id)" routerLink="/employees" type="button" class="btn btn-danger">Delete</button>-->
+
+<!--  <button (click)="updateEmployee()"-->
+<!--          class="btn btn-primary float-left mb-3" type="button">-->
+<!--    Update-->
+<!--  </button>-->
+<!--  </div>-->
+
+<!--</div>-->
+
+<div *ngIf="employee"
+     class="container text-center col-4">
+  <h2 class = "m-4" >{{employee.first_name && employee.last_name | uppercase}} Task-Details</h2>
+  <div class="input-group mb-3">
+    <div class="input-group-text"><span>ID: </span>
+    </div>
+    <input
+            type="text"
+            class="form-control"
+            placeholder="Name"
+            disabled
+            [(ngModel)]="employee.id" placeholder="Employee ID"/>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-text"><span>First Name: </span>
+    </div>
+    <input
+            type="text"
+            class="form-control"
+            placeholder="Task Name"
+            [(ngModel)]="employee.first_name"/>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-text"><span>Last Name: </span>
+    </div>
+    <input
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            [(ngModel)]="employee.last_name"/>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-text"><span>Department Name: </span>
+    </div>
+    <input type="text"
+           class="form-control"
+           placeholder="Department Name"
+           disabled
+           [(ngModel)]="departmentsService.getDepartmentById(employee.department_id).name" placeholder="Department ID">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-text"><span>Birth date</span>
+    </div>
+    <input
+            type="text"
+            class="form-control"
+            placeholder="Birth Date"
+            [(ngModel)]="employee.birth_date"/>
+  </div>
+  <button (click)="updateEmployee() "
+          routerLink="/employees" class="btn btn-success float-left mb-3" type="button" >
+    Save
+  </button>
+  <button routerLink="/employees" class="btn btn-primary float-center mb-3" type="button">
+    Cancel
+  </button>
+  <button (click)="deleteEmployee(employee.id)"
+          routerLink="/employees" class="btn btn-danger float-right mb-3" type="button">
+    Delete
+  </button>
+  <div class="clearfix"></div>
+</div>
+

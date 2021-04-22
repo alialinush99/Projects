@@ -1,0 +1,10 @@
+.task p, .task button
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+}
+.task {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
